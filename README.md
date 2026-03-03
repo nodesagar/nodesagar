@@ -10,60 +10,40 @@
   ╰─────────────────────────────────────────────────────────────────╯
 -->
 
-
-
-
-
 &nbsp;
 
 <img align="right" src="https://github.com/user-attachments/assets/2bfb3b6a-e237-4f78-bfb1-8389d22c1df6" width="130" alt="pixel art">
-
-
-
 
 **hi — i'm Sagar**
 
 I tinker with things until I understand them, then build something new with what I learned. mostly interested in frontend design, creative SaaS, and productivity tools. Though the interesting work usually ends up being somewhere adjacent to where I started.
 
+software engineering student. mac user. community person. usually building, sometimes overthinking, always shipping something.
+
 &nbsp;
 
 **what i'm working on lately →**
 
-&nbsp;&nbsp;&nbsp;&nbsp;↳ &nbsp;[current project — one sentence, honest, not polished]  
-&nbsp;&nbsp;&nbsp;&nbsp;↳ &nbsp;[thing you're learning right now]  
-&nbsp;&nbsp;&nbsp;&nbsp;↳ &nbsp;[something you're curious about, even if it goes nowhere]
+&nbsp;&nbsp;&nbsp;&nbsp;↳ &nbsp;building a calendar management app that turns messy notes or timetables into clean calendar events using oauth and integrations.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;↳ &nbsp;learning more about testing properly. E2E, playwright, and how to not ship fragile frontend code.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;↳ &nbsp;thinking a lot about small, focused SaaS tools that solve one annoying problem really well instead of trying to build the next “everything app”.
 
 &nbsp;
 
 **tools i reach for →**
 
-&nbsp;&nbsp;&nbsp;&nbsp;`[language]` &nbsp;`[language]` &nbsp;`[tool]` &nbsp;`[tool]` &nbsp;`[and whatever the project needs]`
+&nbsp;&nbsp;&nbsp;&nbsp;`typescript` &nbsp;`javascript` &nbsp;`react` &nbsp;`node` &nbsp;`playwright` &nbsp;`git` &nbsp;`figma`  
 
 &nbsp;
 
 **find me →**
 
-&nbsp;&nbsp;&nbsp;&nbsp;[writing](https://your-blog-or-notes-site.com) &nbsp;·&nbsp; [twitter / x](https://twitter.com/yourhandle) &nbsp;·&nbsp; [email](mailto:you@yourdomain.com)
+&nbsp;&nbsp;&nbsp;&nbsp;[building in public (soon)](https://github.com/nodesagar) &nbsp;·&nbsp; [x / twitter](https://twitter.com/yourhandle) &nbsp;·&nbsp; [email](mailto:you@yourdomain.com)
 
 &nbsp;
 
 ---
 
-<sub>*usually somewhere between the docs and the debugger.*</sub>
-
-<!--
-  ─────────────────────────────────────────────
-  A few notes on keeping this fresh:
-
-  · The "what i'm working on" section should feel
-    like a journal entry, not a portfolio entry.
-    Be honest. "failing to finish a ray tracer"
-    is more interesting than "building a ray tracer."
-
-  · Update the tagline at the bottom when it stops
-    feeling true. It should sound like you.
-
-  · The capybara blinks and twitches its ear.
-    Most people won't notice. That's the point.
-  ─────────────────────────────────────────────
--->
+<sub>*usually somewhere between the docs, the debugger, and a half-written product idea.*</sub>
