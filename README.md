@@ -40,7 +40,7 @@ software engineering student. mac user. community person. usually building, some
 
 **find me →**
 
-&nbsp;&nbsp;&nbsp;&nbsp;[building in public (soon)](https://github.com/nodesagar) &nbsp;·&nbsp; [x / twitter](https://twitter.com/yourhandle) &nbsp;·&nbsp; [email](mailto:you@yourdomain.com)
+&nbsp;&nbsp;&nbsp;&nbsp;[building in public (soon)](https://github.com/nodesagar) &nbsp;·&nbsp; [x / twitter](https://twitter.com/nodesagar) &nbsp;·&nbsp; [email](mailto:conveytosagar@gmail.com)
 
 &nbsp;
 
