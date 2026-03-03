@@ -1,16 +1,64 @@
-## Hi there 👋
+<!--
+  ╭─────────────────────────────────────────────────────────────────╮
+  │  GitHub Profile README                                          │
+  │                                                                 │
+  │  SETUP:                                                         │
+  │  1. Create a repo named exactly your GitHub username            │
+  │  2. Drop capybara.gif into the root of that repo                │
+  │  3. Paste this README.md into the root                          │
+  │  4. Replace every [placeholder] with your own words             │
+  ╰─────────────────────────────────────────────────────────────────╯
+-->
+
+<div align="center">
+  <img src="capybara.gif" width="76" alt="" />
+</div>
+
+&nbsp;
+
+**hi — i'm [your name]**
+
+i tinker with things until i understand them, then build something new with what i learned. mostly interested in [your domain — e.g. systems / web / ML / compilers / hardware], though the interesting work usually ends up being somewhere adjacent to where i started.
+
+&nbsp;
+
+**what i'm working on lately →**
+
+&nbsp;&nbsp;&nbsp;&nbsp;↳ &nbsp;[current project — one sentence, honest, not polished]  
+&nbsp;&nbsp;&nbsp;&nbsp;↳ &nbsp;[thing you're learning right now]  
+&nbsp;&nbsp;&nbsp;&nbsp;↳ &nbsp;[something you're curious about, even if it goes nowhere]
+
+&nbsp;
+
+**tools i reach for →**
+
+&nbsp;&nbsp;&nbsp;&nbsp;`[language]` &nbsp;`[language]` &nbsp;`[tool]` &nbsp;`[tool]` &nbsp;`[and whatever the project needs]`
+
+&nbsp;
+
+**find me →**
+
+&nbsp;&nbsp;&nbsp;&nbsp;[writing](https://your-blog-or-notes-site.com) &nbsp;·&nbsp; [twitter / x](https://twitter.com/yourhandle) &nbsp;·&nbsp; [email](mailto:you@yourdomain.com)
+
+&nbsp;
+
+---
+
+<sub>*usually somewhere between the docs and the debugger.*</sub>
 
 <!--
-**nodesagar/nodesagar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+  ─────────────────────────────────────────────
+  A few notes on keeping this fresh:
 
-Here are some ideas to get you started:
+  · The "what i'm working on" section should feel
+    like a journal entry, not a portfolio entry.
+    Be honest. "failing to finish a ray tracer"
+    is more interesting than "building a ray tracer."
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+  · Update the tagline at the bottom when it stops
+    feeling true. It should sound like you.
+
+  · The capybara blinks and twitches its ear.
+    Most people won't notice. That's the point.
+  ─────────────────────────────────────────────
 -->
