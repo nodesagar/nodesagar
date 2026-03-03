@@ -16,9 +16,9 @@
 
 &nbsp;
 
-**hi — i'm [your name]**
+**hi — i'm Sagar**
 
-i tinker with things until i understand them, then build something new with what i learned. mostly interested in [your domain — e.g. systems / web / ML / compilers / hardware], though the interesting work usually ends up being somewhere adjacent to where i started.
+I tinker with things until I understand them, then build something new with what I learned. mostly interested in frontend design, creative SaaS, and productivity tools. Though the interesting work usually ends up being somewhere adjacent to where I started.
 
 &nbsp;
 
