@@ -14,7 +14,7 @@
 
 <img align="right" src="https://github.com/user-attachments/assets/2bfb3b6a-e237-4f78-bfb1-8389d22c1df6" width="130" alt="pixel art">
 
-**hi — i'm Sagar**
+**Hi — I'm Sagar**
 
 I tinker with things until I understand them, then build something new with what I learned. mostly interested in frontend design, creative SaaS, and productivity tools. Though the interesting work usually ends up being somewhere adjacent to where I started.
 
