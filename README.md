@@ -34,7 +34,7 @@ software engineering student. mac user. community person. usually building, some
 
 **tools i reach for →**
 
-&nbsp;&nbsp;&nbsp;&nbsp;`typescript` &nbsp;`javascript` &nbsp;`react` &nbsp;`node` &nbsp;`playwright` &nbsp;`git` &nbsp;`figma`  
+&nbsp;&nbsp;&nbsp;&nbsp;`typescript` &nbsp;`javascript` &nbsp;`react` &nbsp;`node` &nbsp;`zustand` &nbsp;`git` &nbsp;`figma`  
 
 &nbsp;
 
