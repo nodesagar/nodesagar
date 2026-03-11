@@ -44,9 +44,6 @@ software engineering student. mac user. community person. usually building, some
 
 &nbsp;
 
-
-[![Sagar's GitHub stats](https://github-readme-stats.vercel.app/api?username=nodesagar)](https://github.com/anuraghazra/github-readme-stats)
-
 ---
 
 <sub>*usually somewhere between the docs, the debugger, and a half-written product idea.*</sub>
