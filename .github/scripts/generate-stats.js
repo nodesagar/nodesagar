@@ -105,7 +105,7 @@ async function main() {
 
   const today = new Date().toISOString().split("T")[0];
   const firstDate = streak.firstContributionDate ? streak.firstContributionDate.split("T")[0] : "";
-  const totalStr = streak.totalContributions.toLocaleString?.() ?? streak.totalContributions;
+  const totalStr = user.contributionsCollection.contributionCalendar.totalContributions.toLocaleString();
 
   const statsBlock = `<!-- STATS:START -->
 ## 📊 My Stats
