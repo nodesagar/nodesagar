@@ -50,13 +50,13 @@ software engineering student. mac user. community person. usually building, some
 
 **stats →**
 
+ <!-- <p align="center"> -->
+ <!-- <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=ff6b6b&icon_color=ff6b6b&text_color=c9d1d9&count_private=true" height="165" alt="GitHub Stats">
+  &nbsp;-->
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=ff6b6b&icon_color=ff6b6b&text_color=c9d1d9&count_private=true" height="165" alt="GitHub Stats">
-  &nbsp;
-  <img src="https://streak-stats.demolab.com?user=nodesagar&theme=dark&hide_border=true&background=0D1117&ring=ff6b6b&fire=ff6b6b&currStreakLabel=ff6b6b" height="165" alt="GitHub Streak">
-</p>
 
-<p align="center">
+  <img src="https://streak-stats.demolab.com?user=nodesagar&theme=dark&hide_border=true&background=0D1117&ring=ff6b6b&fire=ff6b6b&currStreakLabel=ff6b6b" height="165" alt="GitHub Streak">
+  
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=ff6b6b&text_color=c9d1d9&langs_count=6" height="130" alt="Top Languages">
 </p>
 
