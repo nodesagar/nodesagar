@@ -67,10 +67,10 @@ software engineering student. mac user. community person. usually building, some
 <!-- STATS:START -->
 ## 📊 My Stats
 
-| — | 5 | 9 |
+| 431 | — | — |
 |:---:|:---:|:---:|
 | **Total Contributions** | **Current Streak** | **Longest Streak** |
-| 2022-06-13 – Present | | 2026-03-22 – 2026-03-30 |
+|  – Present | | undefined – undefined |
 
 ### 🌱 OSS Contributions (Last 12 Months)
 
