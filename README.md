@@ -72,6 +72,8 @@ software engineering student. mac user. community person. usually building, some
 | **Total Contributions** | **Current Streak** | **Longest Streak** |
 |  – Present | | undefined – undefined |
 
+-->
+
 ### 🌱 OSS Contributions (Last 12 Months)
 
 | Repository | ⭐ | Merged PRs | Reviews | Issues |
@@ -82,7 +84,7 @@ software engineering student. mac user. community person. usually building, some
 
 *Last updated: 2026-04-27*
 
--->
+
 <!-- STATS:END -->
 
 ---
