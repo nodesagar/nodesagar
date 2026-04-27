@@ -4,11 +4,13 @@
   │                                                                 │
   │  SETUP:                                                         │
   │  1. Create a repo named exactly your GitHub username            │
-  │  2. Drop capybara.gif into the root of that repo                │
+  │  2. Drop SAGAR_NASA.png into the root of that repo              │
   │  3. Paste this README.md into the root                          │
   │  4. Replace every [placeholder] with your own words             │
   ╰─────────────────────────────────────────────────────────────────╯
 -->
+
+<img src="https://raw.githubusercontent.com/nodesagar/nodesagar/main/SAGAR_NASA.png" width="100%" alt="banner — satellite view of river meanders">
 
 &nbsp;
 
@@ -25,10 +27,8 @@ software engineering student. mac user. community person. usually building, some
 **what i'm working on lately →**
 
 &nbsp;&nbsp;&nbsp;&nbsp;↳ &nbsp;building a calendar management app that turns messy notes or timetables into clean calendar events using oauth and integrations.  
-
 &nbsp;&nbsp;&nbsp;&nbsp;↳ &nbsp;learning more about testing properly. E2E, playwright, and how to not ship fragile frontend code.  
-
-&nbsp;&nbsp;&nbsp;&nbsp;↳ &nbsp;thinking a lot about small, focused SaaS tools that solve one annoying problem really well instead of trying to build the next “everything app”.
+&nbsp;&nbsp;&nbsp;&nbsp;↳ &nbsp;thinking a lot about small, focused SaaS tools that solve one annoying problem really well instead of trying to build the next "everything app".
 
 &nbsp;
 
@@ -41,6 +41,24 @@ software engineering student. mac user. community person. usually building, some
 **find me →**
 
 &nbsp;&nbsp;&nbsp;&nbsp;[building in public (soon)](https://github.com/nodesagar) &nbsp;·&nbsp; [x / twitter](https://twitter.com/nodesagar) &nbsp;·&nbsp; [email](mailto:conveytosagar@gmail.com)
+
+&nbsp;
+
+---
+
+&nbsp;
+
+**stats →**
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=ff6b6b&icon_color=ff6b6b&text_color=c9d1d9&count_private=true" height="165" alt="GitHub Stats">
+  &nbsp;
+  <img src="https://streak-stats.demolab.com?user=nodesagar&theme=dark&hide_border=true&background=0D1117&ring=ff6b6b&fire=ff6b6b&currStreakLabel=ff6b6b" height="165" alt="GitHub Streak">
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=ff6b6b&text_color=c9d1d9&langs_count=6" height="130" alt="Top Languages">
+</p>
 
 &nbsp;
 
