@@ -64,7 +64,7 @@ software engineering student. mac user. community person. usually building, some
 
 ---
 
-<!-- STATS:START -->
+<!-- STATS:START 
 ## 📊 My Stats
 
 | 431 | — | — |
@@ -81,6 +81,8 @@ software engineering student. mac user. community person. usually building, some
 **Totals (all public OSS):** 4 merged PRs · 7 issues
 
 *Last updated: 2026-04-27*
+
+-->
 <!-- STATS:END -->
 
 ---
