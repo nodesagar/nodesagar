@@ -1,16 +1,4 @@
-<!--
-  ╭─────────────────────────────────────────────────────────────────╮
-  │  GitHub Profile README                                          │
-  │                                                                 │
-  │  SETUP:                                                         │
-  │  1. Create a repo named exactly your GitHub username            │
-  │  2. Drop SAGAR_NASA.png into the root of that repo              │
-  │  3. Paste this README.md into the root                          │
-  │  4. Replace every [placeholder] with your own words             │
-  ╰─────────────────────────────────────────────────────────────────╯
--->
-
-<img src="https://raw.githubusercontent.com/nodesagar/nodesagar/main/SAGAR_NASA.png" width="100%" alt="banner — satellite view of river meanders">
+<img src="https://raw.githubusercontent.com/nodesagar/nodesagar/main/SAGAR_NASA.png" width="100%" alt="banner">
 
 &nbsp;
 
@@ -34,7 +22,7 @@ software engineering student. mac user. community person. usually building, some
 
 **tools i reach for →**
 
-&nbsp;&nbsp;&nbsp;&nbsp;`typescript` &nbsp;`javascript` &nbsp;`react` &nbsp;`node` &nbsp;`zustand` &nbsp;`git` &nbsp;`Next.js`  
+&nbsp;&nbsp;&nbsp;&nbsp;`typescript` &nbsp;`javascript` &nbsp;`react` &nbsp;`node` &nbsp;`zustand` &nbsp;`git` &nbsp;`Next.js`
 
 &nbsp;
 
@@ -44,68 +32,27 @@ software engineering student. mac user. community person. usually building, some
 
 &nbsp;
 
-
+---
 
 &nbsp;
 
 **stats →**
 
- <!-- <p align="center"> -->
- <!-- <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=ff6b6b&icon_color=ff6b6b&text_color=c9d1d9&count_private=true" height="165" alt="GitHub Stats">
-  &nbsp;-->
 <p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="170" alt="GitHub Stats">
+  &nbsp;&nbsp;
+  <img src="https://streak-stats.demolab.com?user=nodesagar&theme=tokyonight&hide_border=true" height="170" alt="GitHub Streak">
+</p>
 
-  <img src="https://streak-stats.demolab.com?user=nodesagar&theme=dark&hide_border=true&background=0D1117&ring=ff6b6b&fire=ff6b6b&currStreakLabel=ff6b6b" height="165" alt="GitHub Streak">
-  
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=ff6b6b&text_color=c9d1d9&langs_count=6" height="130" alt="Top Languages">
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" height="130" alt="Top Languages">
 </p>
 
 &nbsp;
 
-
-
-<!-- STATS:START 
-## 📊 My Stats
-
-| 431 | — | — |
-|:---:|:---:|:---:|
-| **Total Contributions** | **Current Streak** | **Longest Streak** |
-|  – Present | | undefined – undefined |
-
--->
-
-### 🌱 OSS Contributions (Last 12 Months)
-
-| Repository | ⭐ | Merged PRs | Reviews | Issues |
-|---|---|---|---|---|
-| [c2siorg/dataloom](https://github.com/c2siorg/dataloom) | 23 | 4 | 0 | 7 |
-
-**Totals (all public OSS):** 4 merged PRs · 7 issues
-
-*Last updated: 2026-04-27*
-
-
-<!-- STATS:END -->
-
 ---
 
 <!-- STATS:START -->
-## 📊 My Stats
-
-| 434 | 5 | 9 |
-|:---:|:---:|:---:|
-| **Total Contributions** | **Current Streak** | **Longest Streak** |
-| 2022-06-13 – Present | | 2026-03-22 – 2026-03-30 |
-
-### 🌱 OSS Contributions (Last 12 Months)
-
-| Repository | ⭐ | Merged PRs | Reviews | Issues |
-|---|---|---|---|---|
-| [c2siorg/dataloom](https://github.com/c2siorg/dataloom) | 23 | 4 | 0 | 7 |
-
-**Totals (all public OSS):** 4 merged PRs · 7 issues
-
-*Last updated: 2026-04-28*
 <!-- STATS:END -->
 
 ---
