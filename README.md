@@ -45,7 +45,7 @@ software engineering student. mac user. community person. usually building, some
 </p>
 
 <p align="center">
-  <img width="70%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=tokyonight&hide_border=true&langs_count=6&card_width=860" alt="Top Languages">
+  <img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=tokyonight&hide_border=true&langs_count=6&card_width=860" alt="Top Languages">
 </p>
 
 &nbsp;
