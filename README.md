@@ -45,7 +45,7 @@ software engineering student. mac user. community person. usually building, some
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" height="130" alt="Top Languages">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=tokyonight&hide_border=true&langs_count=6&card_width=490" alt="Top Languages">
 </p>
 
 &nbsp;
@@ -53,22 +53,6 @@ software engineering student. mac user. community person. usually building, some
 ---
 
 <!-- STATS:START -->
-## 📊 My Stats
-
-| 436 | 6 | 8 |
-|:---:|:---:|:---:|
-| **Total Contributions** | **Current Streak** | **Longest Streak** |
-| 2022-06-13 – Present | | 2026-02-18 – 2026-02-25 |
-
-### 🌱 OSS Contributions (Last 12 Months)
-
-| Repository | ⭐ | Merged PRs | Reviews | Issues |
-|---|---|---|---|---|
-| [c2siorg/dataloom](https://github.com/c2siorg/dataloom) | 23 | 4 | 0 | 7 |
-
-**Totals (all public OSS):** 4 merged PRs · 7 issues
-
-*Last updated: 2026-04-28*
 <!-- STATS:END -->
 
 ---
