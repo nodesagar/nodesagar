@@ -6,9 +6,11 @@
 
 **Hi — I'm Sagar**
 
-I tinker with things until I understand them, then build something new with what I learned. mostly interested in frontend design, creative SaaS, and productivity tools. Though the interesting work usually ends up being somewhere adjacent to where I started.
+<a href="https://github.com/nodesagar">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=3000&pause=1000&color=70A5FD&width=500&lines=software+engineering+student.;mac+user.+community+person.;usually+building%2C+sometimes+overthinking.;always+shipping+something." alt="Typing SVG">
+</a>
 
-software engineering student. mac user. community person. usually building, sometimes overthinking, always shipping something.
+I tinker with things until I understand them, then build something new with what I learned. mostly interested in frontend design, creative SaaS, and productivity tools. Though the interesting work usually ends up being somewhere adjacent to where I started.
 
 &nbsp;
 
@@ -39,28 +41,48 @@ software engineering student. mac user. community person. usually building, some
 **stats →**
 
 <p align="center">
-  <a href="https://github.com/nodesagar">
-    <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&show_icons=true&theme=tokyonight&hide_border=true&hide_rank=true&card_width=250" height="150" alt="GitHub Stats">
-  </a>
-  <a href="https://github.com/nodesagar">
-    <img src="https://streak-stats.demolab.com?user=nodesagar&theme=tokyonight&hide_border=true&card_width=250" height="150" alt="GitHub Streak">
-  </a>
-  <a href="https://github.com/nodesagar">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=tokyonight&hide_border=true&langs_count=5&card_width=250" height="150" alt="Top Languages">
-  </a>
+  <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&show_icons=true&theme=tokyonight&hide_border=true&hide_rank=true&card_width=280" height="155" alt="GitHub Stats">
+  &nbsp;
+  <img src="https://streak-stats.demolab.com?user=nodesagar&theme=tokyonight&hide_border=true&card_width=280" height="155" alt="GitHub Streak">
+  &nbsp;
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=tokyonight&hide_border=true&langs_count=5&card_width=240" height="155" alt="Top Languages">
 </p>
+
+&nbsp;
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=nodesagar&theme=tokyo-night&hide_border=true&area=true&color=70a5fd&line=70a5fd&point=cba6f7" width="100%" alt="Contribution Graph">
+</p>
+
+&nbsp;
+
+---
+
+&nbsp;
+
+**contribution snake →**
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nodesagar/nodesagar/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/nodesagar/nodesagar/output/github-contribution-grid-snake.svg">
+    <img alt="contribution snake" src="https://raw.githubusercontent.com/nodesagar/nodesagar/output/github-contribution-grid-snake-dark.svg">
+  </picture>
+</p>
+
+&nbsp;
+
+**3d contributions →**
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/nodesagar/nodesagar/main/profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D Contribution Graph">
+</p>
+
 &nbsp;
 
 ---
 
 <!-- STATS:START -->
-**open source →**
-
-| Repository | ⭐ | Merged PRs | Reviews | Issues |
-|---|---|---|---|---|
-| [c2siorg/dataloom](https://github.com/c2siorg/dataloom) | 23 | 4 | 0 | 7 |
-
-**Totals:** 4 merged PRs · 7 issues &nbsp;·&nbsp; *updated 2026-04-28*
 <!-- STATS:END -->
 
 ---
