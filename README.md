@@ -39,13 +39,11 @@ software engineering student. mac user. community person. usually building, some
 **stats →**
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&show_icons=true&theme=tokyonight&hide_border=true&hide_rank=true" height="170" alt="GitHub Stats">
-  &nbsp;&nbsp;
-  <img src="https://streak-stats.demolab.com?user=nodesagar&theme=tokyonight&hide_border=true" height="170" alt="GitHub Streak">
-</p>
-
-<p align="center">
-  <img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=tokyonight&hide_border=true&langs_count=6&card_width=860" alt="Top Languages">
+  <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&show_icons=true&theme=tokyonight&hide_border=true&hide_rank=true" height="160" alt="GitHub Stats">
+  &nbsp;
+  <img src="https://streak-stats.demolab.com?user=nodesagar&theme=tokyonight&hide_border=true" height="160" alt="GitHub Streak">
+  &nbsp;
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=tokyonight&hide_border=true&langs_count=5" height="160" alt="Top Languages">
 </p>
 
 &nbsp;
