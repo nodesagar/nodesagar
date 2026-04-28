@@ -89,4 +89,25 @@ software engineering student. mac user. community person. usually building, some
 
 ---
 
+<!-- STATS:START -->
+## 📊 My Stats
+
+| 434 | 5 | 9 |
+|:---:|:---:|:---:|
+| **Total Contributions** | **Current Streak** | **Longest Streak** |
+| 2022-06-13 – Present | | 2026-03-22 – 2026-03-30 |
+
+### 🌱 OSS Contributions (Last 12 Months)
+
+| Repository | ⭐ | Merged PRs | Reviews | Issues |
+|---|---|---|---|---|
+| [c2siorg/dataloom](https://github.com/c2siorg/dataloom) | 23 | 4 | 0 | 7 |
+
+**Totals (all public OSS):** 4 merged PRs · 7 issues
+
+*Last updated: 2026-04-28*
+<!-- STATS:END -->
+
+---
+
 <sub>*usually somewhere between the docs, the debugger, and a half-written product idea.*</sub>
