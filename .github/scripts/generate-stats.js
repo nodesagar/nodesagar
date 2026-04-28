@@ -1,95 +1,108 @@
 // .github/scripts/generate-stats.js
-// Fetches your public OSS contributions and patches the README stats section.
-
 const { graphql } = require("@octokit/graphql");
 const fs = require("fs");
 
 const USERNAME = process.env.GH_USERNAME || "nodesagar";
-const TOKEN = process.env.GH_TOKEN;
 
 const gql = graphql.defaults({
-  headers: { authorization: `token ${TOKEN}` },
+  headers: { authorization: `token ${process.env.GH_TOKEN}` },
 });
 
-async function getContributions() {
+async function getData() {
   const { user } = await gql(`
     query($login: String!) {
       user(login: $login) {
+        createdAt
         contributionsCollection {
-          totalCommitContributions
-          totalPullRequestContributions
-          totalIssueContributions
-          totalRepositoryContributions
           contributionCalendar {
             totalContributions
+            weeks {
+              contributionDays {
+                date
+                contributionCount
+              }
+            }
           }
         }
         pullRequests(states: MERGED, first: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
-          totalCount
           nodes {
-            repository {
-              nameWithOwner
-              stargazerCount
-              url
-            }
+            repository { nameWithOwner stargazerCount url }
           }
         }
         issues(first: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
           nodes {
-            repository {
-              nameWithOwner
-              stargazerCount
-              url
-            }
+            repository { nameWithOwner stargazerCount url }
           }
         }
       }
     }
   `, { login: USERNAME });
-
   return user;
 }
 
-async function getStreakData() {
-  // Uses the public streak-stats API for streak numbers
-  const res = await fetch(`https://streak-stats.demolab.com/?user=${USERNAME}&type=json`);
-  if (!res.ok) return { currentStreak: "—", longestStreak: "—", totalContributions: "—" };
-  const data = await res.json();
-  return {
-    currentStreak: data.currentStreak?.length ?? "—",
-    longestStreak: data.longestStreak?.length ?? "—",
-    longestStreakStart: data.longestStreak?.start ?? "",
-    longestStreakEnd: data.longestStreak?.end ?? "",
-    totalContributions: data.totalContributions?.value ?? "—",
-    firstContributionDate: data.firstContribution ?? "",
-  };
+function calcStreaks(weeks) {
+  const days = weeks
+    .flatMap(w => w.contributionDays)
+    .sort((a, b) => a.date.localeCompare(b.date));
+
+  const active = new Set(days.filter(d => d.contributionCount > 0).map(d => d.date));
+
+  // Longest streak
+  let longest = 0, tempLen = 0, tempStart = "", longestStart = "", longestEnd = "";
+  for (const day of days) {
+    if (active.has(day.date)) {
+      if (tempLen === 0) tempStart = day.date;
+      tempLen++;
+      if (tempLen > longest) {
+        longest = tempLen;
+        longestStart = tempStart;
+        longestEnd = day.date;
+      }
+    } else {
+      tempLen = 0;
+    }
+  }
+
+  // Current streak (walk backwards from today)
+  let current = 0;
+  let check = new Date();
+  for (let i = 0; i < 365; i++) {
+    const d = check.toISOString().split("T")[0];
+    if (active.has(d)) {
+      current++;
+      check = new Date(check.getTime() - 86400000);
+    } else if (i === 0) {
+      // no contribution today, start checking from yesterday
+      check = new Date(check.getTime() - 86400000);
+    } else {
+      break;
+    }
+  }
+
+  return { current, longest, longestStart, longestEnd };
 }
 
-function buildRepoTable(prs, issues) {
-  // Aggregate repos
+function buildTable(prs, issues) {
   const repos = {};
 
-  for (const pr of prs.nodes) {
-    const { nameWithOwner, stargazerCount, url } = pr.repository;
-    // skip own repos
-    if (nameWithOwner.startsWith(`${USERNAME}/`)) continue;
-    if (!repos[nameWithOwner]) repos[nameWithOwner] = { stars: stargazerCount, mergedPRs: 0, reviews: 0, issues: 0, url };
-    repos[nameWithOwner].mergedPRs++;
+  for (const { repository: r } of prs.nodes) {
+    if (r.nameWithOwner.startsWith(`${USERNAME}/`)) continue;
+    repos[r.nameWithOwner] ??= { stars: r.stargazerCount, mergedPRs: 0, reviews: 0, issues: 0, url: r.url };
+    repos[r.nameWithOwner].mergedPRs++;
   }
 
-  for (const issue of issues.nodes) {
-    const { nameWithOwner, stargazerCount, url } = issue.repository;
-    if (nameWithOwner.startsWith(`${USERNAME}/`)) continue;
-    if (!repos[nameWithOwner]) repos[nameWithOwner] = { stars: stargazerCount, mergedPRs: 0, reviews: 0, issues: 0, url };
-    repos[nameWithOwner].issues++;
+  for (const { repository: r } of issues.nodes) {
+    if (r.nameWithOwner.startsWith(`${USERNAME}/`)) continue;
+    repos[r.nameWithOwner] ??= { stars: r.stargazerCount, mergedPRs: 0, reviews: 0, issues: 0, url: r.url };
+    repos[r.nameWithOwner].issues++;
   }
 
-  // Sort by stars desc
-  const sorted = Object.entries(repos).sort((a, b) => b[1].stars - a[1].stars).slice(0, 10);
+  const sorted = Object.entries(repos)
+    .sort((a, b) => b[1].stars - a[1].stars)
+    .slice(0, 10);
 
   const totalPRs = sorted.reduce((s, [, v]) => s + v.mergedPRs, 0);
   const totalIssues = sorted.reduce((s, [, v]) => s + v.issues, 0);
-
   const rows = sorted
     .map(([name, v]) => `| [${name}](${v.url}) | ${v.stars.toLocaleString()} | ${v.mergedPRs} | ${v.reviews} | ${v.issues} |`)
     .join("\n");
@@ -98,22 +111,23 @@ function buildRepoTable(prs, issues) {
 }
 
 async function main() {
-  console.log("Fetching contribution data...");
-  const [user, streak] = await Promise.all([getContributions(), getStreakData()]);
+  console.log("Fetching GitHub data...");
+  const user = await getData();
 
-  const { rows, totalPRs, totalIssues } = buildRepoTable(user.pullRequests, user.issues);
-
+  const calendar = user.contributionsCollection.contributionCalendar;
+  const total = calendar.totalContributions.toLocaleString();
+  const joinDate = user.createdAt.split("T")[0];
+  const { current, longest, longestStart, longestEnd } = calcStreaks(calendar.weeks);
+  const { rows, totalPRs, totalIssues } = buildTable(user.pullRequests, user.issues);
   const today = new Date().toISOString().split("T")[0];
-  const firstDate = streak.firstContributionDate ? streak.firstContributionDate.split("T")[0] : "";
-  const totalStr = user.contributionsCollection.contributionCalendar.totalContributions.toLocaleString();
 
-  const statsBlock = `<!-- STATS:START -->
+  const block = `<!-- STATS:START -->
 ## 📊 My Stats
 
-| ${totalStr} | ${streak.currentStreak} | ${streak.longestStreak} |
+| ${total} | ${current} | ${longest} |
 |:---:|:---:|:---:|
 | **Total Contributions** | **Current Streak** | **Longest Streak** |
-| ${firstDate} – Present | | ${streak.longestStreakStart} – ${streak.longestStreakEnd} |
+| ${joinDate} – Present | | ${longestStart} – ${longestEnd} |
 
 ### 🌱 OSS Contributions (Last 12 Months)
 
@@ -126,18 +140,16 @@ ${rows}
 *Last updated: ${today}*
 <!-- STATS:END -->`;
 
-  // Read and patch README
   let readme = fs.readFileSync("README.md", "utf8");
 
   if (readme.includes("<!-- STATS:START -->")) {
-    readme = readme.replace(/<!-- STATS:START -->[\s\S]*?<!-- STATS:END -->/m, statsBlock);
+    readme = readme.replace(/<!-- STATS:START -->[\s\S]*?<!-- STATS:END -->/m, block);
   } else {
-    // Inject before the final <sub> line
-    readme = readme.replace(/\n---\n\n<sub>/, `\n---\n\n${statsBlock}\n\n---\n\n<sub>`);
+    readme = readme.replace(/\n---\n\n<sub>/, `\n---\n\n${block}\n\n---\n\n<sub>`);
   }
 
   fs.writeFileSync("README.md", readme);
-  console.log("README.md updated successfully.");
+  console.log("README.md patched successfully.");
 }
 
-main().catch(console.error);
+main().catch(err => { console.error(err); process.exit(1); });
