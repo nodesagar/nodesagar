@@ -53,6 +53,13 @@ software engineering student. mac user. community person. usually building, some
 ---
 
 <!-- STATS:START -->
+**open source →**
+
+| Repository | ⭐ | Merged PRs | Reviews | Issues |
+|---|---|---|---|---|
+| [c2siorg/dataloom](https://github.com/c2siorg/dataloom) | 23 | 4 | 0 | 7 |
+
+**Totals:** 4 merged PRs · 7 issues &nbsp;·&nbsp; *updated 2026-04-28*
 <!-- STATS:END -->
 
 ---
