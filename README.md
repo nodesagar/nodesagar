@@ -70,13 +70,6 @@ I tinker with things until I understand them, then build something new with what
   </picture>
 </p>
 
-&nbsp;
-
-**3d contributions →**
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/nodesagar/nodesagar/main/profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D Contribution Graph">
-</p>
 
 &nbsp;
 
