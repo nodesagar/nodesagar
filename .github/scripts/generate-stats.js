@@ -12,18 +12,6 @@ async function getData() {
   const { user } = await gql(`
     query($login: String!) {
       user(login: $login) {
-        createdAt
-        contributionsCollection {
-          contributionCalendar {
-            totalContributions
-            weeks {
-              contributionDays {
-                date
-                contributionCount
-              }
-            }
-          }
-        }
         pullRequests(states: MERGED, first: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
           nodes {
             repository { nameWithOwner stargazerCount url }
@@ -38,48 +26,6 @@ async function getData() {
     }
   `, { login: USERNAME });
   return user;
-}
-
-function calcStreaks(weeks) {
-  const days = weeks
-    .flatMap(w => w.contributionDays)
-    .sort((a, b) => a.date.localeCompare(b.date));
-
-  const active = new Set(days.filter(d => d.contributionCount > 0).map(d => d.date));
-
-  // Longest streak
-  let longest = 0, tempLen = 0, tempStart = "", longestStart = "", longestEnd = "";
-  for (const day of days) {
-    if (active.has(day.date)) {
-      if (tempLen === 0) tempStart = day.date;
-      tempLen++;
-      if (tempLen > longest) {
-        longest = tempLen;
-        longestStart = tempStart;
-        longestEnd = day.date;
-      }
-    } else {
-      tempLen = 0;
-    }
-  }
-
-  // Current streak (walk backwards from today)
-  let current = 0;
-  let check = new Date();
-  for (let i = 0; i < 365; i++) {
-    const d = check.toISOString().split("T")[0];
-    if (active.has(d)) {
-      current++;
-      check = new Date(check.getTime() - 86400000);
-    } else if (i === 0) {
-      // no contribution today, start checking from yesterday
-      check = new Date(check.getTime() - 86400000);
-    } else {
-      break;
-    }
-  }
-
-  return { current, longest, longestStart, longestEnd };
 }
 
 function buildTable(prs, issues) {
@@ -114,30 +60,17 @@ async function main() {
   console.log("Fetching GitHub data...");
   const user = await getData();
 
-  const calendar = user.contributionsCollection.contributionCalendar;
-  const total = calendar.totalContributions.toLocaleString();
-  const joinDate = user.createdAt.split("T")[0];
-  const { current, longest, longestStart, longestEnd } = calcStreaks(calendar.weeks);
   const { rows, totalPRs, totalIssues } = buildTable(user.pullRequests, user.issues);
   const today = new Date().toISOString().split("T")[0];
 
   const block = `<!-- STATS:START -->
-## 📊 My Stats
-
-| ${total} | ${current} | ${longest} |
-|:---:|:---:|:---:|
-| **Total Contributions** | **Current Streak** | **Longest Streak** |
-| ${joinDate} – Present | | ${longestStart} – ${longestEnd} |
-
-### 🌱 OSS Contributions (Last 12 Months)
+**open source →**
 
 | Repository | ⭐ | Merged PRs | Reviews | Issues |
 |---|---|---|---|---|
 ${rows}
 
-**Totals (all public OSS):** ${totalPRs} merged PRs · ${totalIssues} issues
-
-*Last updated: ${today}*
+**Totals:** ${totalPRs} merged PRs · ${totalIssues} issues &nbsp;·&nbsp; *updated ${today}*
 <!-- STATS:END -->`;
 
   let readme = fs.readFileSync("README.md", "utf8");
@@ -149,7 +82,7 @@ ${rows}
   }
 
   fs.writeFileSync("README.md", readme);
-  console.log("README.md patched successfully.");
+  console.log("Done.");
 }
 
 main().catch(err => { console.error(err); process.exit(1); });
