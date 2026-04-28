@@ -39,7 +39,7 @@ software engineering student. mac user. community person. usually building, some
 **stats →**
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="170" alt="GitHub Stats">
+  <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&show_icons=true&theme=tokyonight&hide_border=true" height="170" alt="GitHub Stats">
   &nbsp;&nbsp;
   <img src="https://streak-stats.demolab.com?user=nodesagar&theme=tokyonight&hide_border=true" height="170" alt="GitHub Streak">
 </p>
