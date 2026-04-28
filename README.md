@@ -39,13 +39,16 @@ software engineering student. mac user. community person. usually building, some
 **stats →**
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&show_icons=true&theme=tokyonight&hide_border=true&hide_rank=true" height="160" alt="GitHub Stats">
-  &nbsp;
-  <img src="https://streak-stats.demolab.com?user=nodesagar&theme=tokyonight&hide_border=true" height="160" alt="GitHub Streak">
-  &nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=tokyonight&hide_border=true&langs_count=5" height="160" alt="Top Languages">
+  <a href="https://github.com/nodesagar">
+    <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&show_icons=true&theme=tokyonight&hide_border=true&hide_rank=true&card_width=250" height="150" alt="GitHub Stats">
+  </a>
+  <a href="https://github.com/nodesagar">
+    <img src="https://streak-stats.demolab.com?user=nodesagar&theme=tokyonight&hide_border=true&card_width=250" height="150" alt="GitHub Streak">
+  </a>
+  <a href="https://github.com/nodesagar">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=tokyonight&hide_border=true&langs_count=5&card_width=250" height="150" alt="Top Languages">
+  </a>
 </p>
-
 &nbsp;
 
 ---
