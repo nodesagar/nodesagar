@@ -63,7 +63,7 @@ I tinker with things until I understand them, then build something new with what
 &nbsp;
 
 
-**contributions →**
+**contributions 2026 →**
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/nodesagar/nodesagar/output/contribution-chart.svg" width="100%" alt="Contribution Chart">
