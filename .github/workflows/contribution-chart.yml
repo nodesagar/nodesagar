@@ -5,6 +5,9 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -21,11 +24,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: nodesagar
 
-      - name: Deploy SVG to output branch
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: output
-          publish_dir: ./
-          include_files: contribution-chart.svg
-          keep_files: true
+      - name: Push SVG to output branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin output
+          git checkout output
+          cp $GITHUB_WORKSPACE/contribution-chart.svg ./contribution-chart.svg
+          git add contribution-chart.svg
+          git diff --cached --quiet || git commit -m "chore: update contribution chart"
+          git push origin output
