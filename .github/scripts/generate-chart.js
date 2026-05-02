@@ -42,7 +42,45 @@ async function fetchContributions() {
   return data.data.user.contributionsCollection.contributionCalendar.weeks;
 }
 
+function buildFullYearWeeks(apiWeeks) {
+  // Build a map of date -> count from API data
+  const countMap = {};
+  for (const week of apiWeeks) {
+    for (const day of week.contributionDays) {
+      countMap[day.date] = day.contributionCount;
+    }
+  }
+
+  // Generate all days from Jan 1 to Dec 31 2026
+  const start = new Date("2026-01-01");
+  const end = new Date("2026-12-31");
+
+  // Find the Sunday on or before Jan 1
+  const gridStart = new Date(start);
+  gridStart.setDate(gridStart.getDate() - gridStart.getDay());
+
+  const weeks = [];
+  let current = new Date(gridStart);
+
+  while (current <= end) {
+    const week = [];
+    for (let d = 0; d < 7; d++) {
+      const dateStr = current.toISOString().split("T")[0];
+      const isIn2026 = current >= start && current <= end;
+      week.push({
+        date: dateStr,
+        contributionCount: isIn2026 ? (countMap[dateStr] || 0) : null,
+      });
+      current.setDate(current.getDate() + 1);
+    }
+    weeks.push({ contributionDays: week });
+  }
+
+  return weeks;
+}
+
 function getColor(count) {
+  if (count === null) return "transparent";
   if (count === 0) return "#ebedf0";
   if (count <= 3) return "#9be9a8";
   if (count <= 6) return "#40c463";
@@ -65,7 +103,9 @@ function buildSVG(weeks) {
   let monthLabels = "";
   let lastMonth = -1;
   weeks.forEach((week, wi) => {
-    const firstDay = new Date(week.contributionDays[0].date);
+    const days = week.contributionDays.filter(d => d.contributionCount !== null);
+    if (!days.length) return;
+    const firstDay = new Date(days[0].date);
     const m = firstDay.getMonth();
     if (m !== lastMonth) {
       const x = LEFT_PAD + wi * STEP;
@@ -83,6 +123,7 @@ function buildSVG(weeks) {
   let cells = "";
   weeks.forEach((week, wi) => {
     week.contributionDays.forEach((day) => {
+      if (day.contributionCount === null) return;
       const d = new Date(day.date);
       const dow = d.getDay();
       const row = dow === 0 ? 6 : dow - 1;
@@ -102,7 +143,8 @@ function buildSVG(weeks) {
 }
 
 (async () => {
-  const weeks = await fetchContributions();
+  const apiWeeks = await fetchContributions();
+  const weeks = buildFullYearWeeks(apiWeeks);
   const svg = buildSVG(weeks);
   fs.writeFileSync("contribution-chart.svg", svg);
   console.log(`Done. ${weeks.length} weeks written.`);
