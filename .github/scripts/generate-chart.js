@@ -105,7 +105,7 @@ function buildSVG(weeks) {
   weeks.forEach((week, wi) => {
     const days = week.contributionDays.filter(d => d.contributionCount !== null);
     if (!days.length) return;
-    const [y, mo, da] = days[0].date.split("-").map(Number);
+    const [, mo] = days[0].date.split("-").map(Number);
     const m = mo - 1;
     if (m !== lastMonth) {
       const x = LEFT_PAD + wi * STEP;
@@ -114,6 +114,7 @@ function buildSVG(weeks) {
     }
   });
 
+  // Sun=0 top, Mon=1, Wed=3, Fri=5, Sat=6 bottom
   const dayLabels = ["Mon", "Wed", "Fri"].map((label, i) => {
     const row = i === 0 ? 1 : i === 1 ? 3 : 5;
     const y = TOP_PAD + row * STEP + CELL - 2;
@@ -125,12 +126,12 @@ function buildSVG(weeks) {
     week.contributionDays.forEach((day) => {
       if (day.contributionCount === null) return;
       const [y, mo, da] = day.date.split("-").map(Number);
-      const dow = new Date(y, mo - 1, da).getDay();
-      const row = dow === 0 ? 6 : dow - 1;
+      const dow = new Date(y, mo - 1, da).getDay(); // 0=Sun, 1=Mon ... 6=Sat
+      const row = dow; // Sun at top, matches GitHub layout
       const x = LEFT_PAD + wi * STEP;
-      const y2 = TOP_PAD + row * STEP;
+      const cy = TOP_PAD + row * STEP;
       const color = getColor(day.contributionCount);
-      cells += `<rect x="${x}" y="${y2}" width="${CELL}" height="${CELL}" rx="2" ry="2" fill="${color}"><title>${day.date}: ${day.contributionCount} contributions</title></rect>`;
+      cells += `<rect x="${x}" y="${cy}" width="${CELL}" height="${CELL}" rx="2" ry="2" fill="${color}"><title>${day.date}: ${day.contributionCount} contributions</title></rect>`;
     });
   });
 
