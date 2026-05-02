@@ -2,7 +2,7 @@ const fs = require("fs");
 
 const USERNAME = process.env.USERNAME;
 const TOKEN = process.env.GITHUB_TOKEN;
-const FROM = new Date(Date.now() - 52 * 7 * 24 * 60 * 60 * 1000).toISOString();
+const FROM = "2026-01-01T00:00:00Z";
 const TO = new Date().toISOString();
 
 async function fetchContributions() {
@@ -43,19 +43,19 @@ async function fetchContributions() {
 }
 
 function getColor(count) {
-  if (count === 0) return "#161b22";
-  if (count <= 3) return "#0e4429";
-  if (count <= 6) return "#006d32";
-  if (count <= 9) return "#26a641";
-  return "#39d353";
+  if (count === 0) return "#ebedf0";
+  if (count <= 3) return "#9be9a8";
+  if (count <= 6) return "#40c463";
+  if (count <= 9) return "#30a14e";
+  return "#216e39";
 }
 
 function buildSVG(weeks) {
-  const CELL = 10;
-  const GAP = 3;
+  const CELL = 11;
+  const GAP = 2;
   const STEP = CELL + GAP;
   const TOP_PAD = 28;
-  const LEFT_PAD = 28;
+  const LEFT_PAD = 30;
 
   const numWeeks = weeks.length;
   const width = LEFT_PAD + numWeeks * STEP + 10;
@@ -69,7 +69,7 @@ function buildSVG(weeks) {
     const m = firstDay.getMonth();
     if (m !== lastMonth) {
       const x = LEFT_PAD + wi * STEP;
-      monthLabels += `<text x="${x}" y="14" fill="#8b949e" font-size="9" font-family="'Segoe UI',sans-serif">${months[m]}</text>`;
+      monthLabels += `<text x="${x}" y="14" fill="#57606a" font-size="10" font-family="'Segoe UI',sans-serif">${months[m]}</text>`;
       lastMonth = m;
     }
   });
@@ -77,7 +77,7 @@ function buildSVG(weeks) {
   const dayLabels = ["Mon", "Wed", "Fri"].map((label, i) => {
     const row = i === 0 ? 1 : i === 1 ? 3 : 5;
     const y = TOP_PAD + row * STEP + CELL - 2;
-    return `<text x="0" y="${y}" fill="#8b949e" font-size="9" font-family="'Segoe UI',sans-serif">${label}</text>`;
+    return `<text x="0" y="${y}" fill="#57606a" font-size="10" font-family="'Segoe UI',sans-serif">${label}</text>`;
   }).join("");
 
   let cells = "";
