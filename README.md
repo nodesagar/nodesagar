@@ -41,17 +41,20 @@ I tinker with things until I understand them, then build something new with what
 **stats →**
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nodesagar&theme=prussian" width="100%" alt="Profile Details">
-</p>
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=nodesagar&theme=prussian" width="49%" alt="Repos Per Language">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=nodesagar&theme=prussian" width="49%" alt="Most Commit Language">
-</p>
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=nodesagar&theme=prussian" width="49%" alt="Stats">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=nodesagar&theme=prussian&utcOffset=5.5" width="49%" alt="Productive Time">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=nodesagar&theme=github_dark" width="32%" alt="Languages">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nodesagar&theme=github_dark" width="65%" alt="Profile Details">
 </p>
 
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=nodesagar&theme=github_dark" width="49%" alt="Stats">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=nodesagar&theme=github_dark&utcOffset=5.5" width="49%" alt="Productive Time">
+</p>
+
+&nbsp;
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=nodesagar&theme=github-compact&hide_border=true&area=true" width="100%" alt="Contribution Graph">
+</p>
 
 &nbsp;
 
@@ -67,6 +70,14 @@ I tinker with things until I understand them, then build something new with what
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/nodesagar/nodesagar/output/github-contribution-grid-snake.svg">
     <img alt="contribution snake" src="https://raw.githubusercontent.com/nodesagar/nodesagar/output/github-contribution-grid-snake-dark.svg">
   </picture>
+</p>
+
+&nbsp;
+
+**contributions →**
+
+<p align="center">
+  <img src="https://ghchart.rshah.org/2ea043/nodesagar" width="100%" alt="Contribution Chart">
 </p>
 
 &nbsp;
