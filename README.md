@@ -56,12 +56,6 @@ I tinker with things until I understand them, then build something new with what
 
 &nbsp;
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=nodesagar&theme=tokyo-night&hide_border=true&area=true&color=70a5fd&line=70a5fd&point=cba6f7" width="100%" alt="Contribution Graph">
-</p>
-
-&nbsp;
-
 ---
 
 &nbsp;
