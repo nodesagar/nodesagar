@@ -33,6 +33,12 @@ async function fetchContributions() {
   });
 
   const data = await res.json();
+
+  if (data.errors) {
+    console.error("GraphQL errors:", JSON.stringify(data.errors, null, 2));
+    process.exit(1);
+  }
+
   return data.data.user.contributionsCollection.contributionCalendar.weeks;
 }
 
@@ -55,7 +61,6 @@ function buildSVG(weeks) {
   const width = LEFT_PAD + numWeeks * STEP + 10;
   const height = TOP_PAD + 7 * STEP + 10;
 
-  // Month labels
   const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   let monthLabels = "";
   let lastMonth = -1;
@@ -69,20 +74,18 @@ function buildSVG(weeks) {
     }
   });
 
-  // Day labels
   const dayLabels = ["Mon", "Wed", "Fri"].map((label, i) => {
     const row = i === 0 ? 1 : i === 1 ? 3 : 5;
     const y = TOP_PAD + row * STEP + CELL - 2;
     return `<text x="0" y="${y}" fill="#8b949e" font-size="10" font-family="'Segoe UI',sans-serif">${label}</text>`;
   }).join("");
 
-  // Cells
   let cells = "";
   weeks.forEach((week, wi) => {
     week.contributionDays.forEach((day) => {
       const d = new Date(day.date);
-      const dow = d.getDay(); // 0=Sun
-      const row = dow === 0 ? 6 : dow - 1; // Mon=0 ... Sun=6
+      const dow = d.getDay();
+      const row = dow === 0 ? 6 : dow - 1;
       const x = LEFT_PAD + wi * STEP;
       const y = TOP_PAD + row * STEP;
       const color = getColor(day.contributionCount);
@@ -102,5 +105,5 @@ function buildSVG(weeks) {
   const weeks = await fetchContributions();
   const svg = buildSVG(weeks);
   fs.writeFileSync("contribution-chart.svg", svg);
-  console.log(`Generated chart with ${weeks.length} weeks.`);
+  console.log(`Done. ${weeks.length} weeks written.`);
 })();
