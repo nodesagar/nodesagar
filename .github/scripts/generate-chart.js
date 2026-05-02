@@ -50,8 +50,8 @@ function buildFullYearWeeks(apiWeeks) {
     }
   }
 
-  const start = new Date("2026-01-01");
-  const end = new Date("2026-12-31");
+  const start = new Date(2026, 0, 1);
+  const end = new Date(2026, 11, 31);
 
   const gridStart = new Date(start);
   gridStart.setDate(gridStart.getDate() - gridStart.getDay());
@@ -62,7 +62,10 @@ function buildFullYearWeeks(apiWeeks) {
   while (current <= end) {
     const week = [];
     for (let d = 0; d < 7; d++) {
-      const dateStr = current.toISOString().split("T")[0];
+      const y = current.getFullYear();
+      const mo = String(current.getMonth() + 1).padStart(2, "0");
+      const da = String(current.getDate()).padStart(2, "0");
+      const dateStr = `${y}-${mo}-${da}`;
       const isIn2026 = current >= start && current <= end;
       week.push({
         date: dateStr,
@@ -102,8 +105,8 @@ function buildSVG(weeks) {
   weeks.forEach((week, wi) => {
     const days = week.contributionDays.filter(d => d.contributionCount !== null);
     if (!days.length) return;
-    const firstDay = new Date(days[0].date);
-    const m = firstDay.getMonth();
+    const [y, mo, da] = days[0].date.split("-").map(Number);
+    const m = mo - 1;
     if (m !== lastMonth) {
       const x = LEFT_PAD + wi * STEP;
       monthLabels += `<text x="${x}" y="14" fill="#57606a" font-size="10" font-family="'Segoe UI',sans-serif">${months[m]}</text>`;
@@ -121,13 +124,13 @@ function buildSVG(weeks) {
   weeks.forEach((week, wi) => {
     week.contributionDays.forEach((day) => {
       if (day.contributionCount === null) return;
-      const d = new Date(day.date);
-      const dow = d.getDay();
+      const [y, mo, da] = day.date.split("-").map(Number);
+      const dow = new Date(y, mo - 1, da).getDay();
       const row = dow === 0 ? 6 : dow - 1;
       const x = LEFT_PAD + wi * STEP;
-      const y = TOP_PAD + row * STEP;
+      const y2 = TOP_PAD + row * STEP;
       const color = getColor(day.contributionCount);
-      cells += `<rect x="${x}" y="${y}" width="${CELL}" height="${CELL}" rx="2" ry="2" fill="${color}"><title>${day.date}: ${day.contributionCount} contributions</title></rect>`;
+      cells += `<rect x="${x}" y="${y2}" width="${CELL}" height="${CELL}" rx="2" ry="2" fill="${color}"><title>${day.date}: ${day.contributionCount} contributions</title></rect>`;
     });
   });
 
