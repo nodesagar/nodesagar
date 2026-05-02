@@ -41,17 +41,17 @@ I tinker with things until I understand them, then build something new with what
 **stats →**
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nodesagar&theme=monokai" width="90%">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nodesagar&theme=nord_dark" width="90%">
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=nodesagar&theme=monokai" width="45%">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=nodesagar&theme=monokai" width="45%">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=nodesagar&theme=nord_dark" width="45%">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=nodesagar&theme=nord_dark" width="45%">
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=nodesagar&theme=monokai" width="45%">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=nodesagar&theme=monokai&utcOffset=5.5" width="45%">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=nodesagar&theme=nord_dark" width="45%">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=nodesagar&theme=nord_dark&utcOffset=5.5" width="45%">
 </p>
 
 &nbsp;
