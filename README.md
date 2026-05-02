@@ -41,15 +41,15 @@ I tinker with things until I understand them, then build something new with what
 **stats →**
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nodesagar&theme=nightowl" width="100%" alt="Profile Details">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nodesagar&theme=prussian" width="100%" alt="Profile Details">
 </p>
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=nodesagar&theme=nightowl" width="49%" alt="Repos Per Language">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=nodesagar&theme=nightowl" width="49%" alt="Most Commit Language">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=nodesagar&theme=prussian" width="49%" alt="Repos Per Language">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=nodesagar&theme=prussian" width="49%" alt="Most Commit Language">
 </p>
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=nodesagar&theme=nightowl" width="49%" alt="Stats">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=nodesagar&theme=nightowl&utcOffset=5.5" width="49%" alt="Productive Time">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=nodesagar&theme=prussian" width="49%" alt="Stats">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=nodesagar&theme=prussian&utcOffset=5.5" width="49%" alt="Productive Time">
 </p>
 
 
