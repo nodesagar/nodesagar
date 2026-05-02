@@ -62,17 +62,6 @@ I tinker with things until I understand them, then build something new with what
 
 &nbsp;
 
-**contribution snake →**
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nodesagar/nodesagar/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/nodesagar/nodesagar/output/github-contribution-grid-snake.svg">
-    <img alt="contribution snake" src="https://raw.githubusercontent.com/nodesagar/nodesagar/output/github-contribution-grid-snake-dark.svg">
-  </picture>
-</p>
-
-&nbsp;
 
 **contributions →**
 
