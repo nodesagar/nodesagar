@@ -41,11 +41,17 @@ I tinker with things until I understand them, then build something new with what
 **stats →**
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&show_icons=true&theme=tokyonight&hide_border=true&hide_rank=true&card_width=280" height="155" alt="GitHub Stats">
-  &nbsp;
-  <img src="https://streak-stats.demolab.com?user=nodesagar&theme=tokyonight&hide_border=true&card_width=280" height="155" alt="GitHub Streak">
-  &nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nodesagar&layout=compact&theme=tokyonight&hide_border=true&langs_count=5&card_width=240" height="155" alt="Top Languages">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nodesagar&theme=tokyonight" width="100%" alt="Profile Details">
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=nodesagar&theme=tokyonight" width="49%" alt="Repos Per Language">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=nodesagar&theme=tokyonight" width="49%" alt="Most Commit Language">
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=nodesagar&theme=tokyonight" width="49%" alt="Stats">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=nodesagar&theme=tokyonight&utcOffset=5.5" width="49%" alt="Productive Time">
 </p>
 
 &nbsp;
@@ -70,19 +76,11 @@ I tinker with things until I understand them, then build something new with what
   </picture>
 </p>
 
-
 &nbsp;
 
 ---
 
 <!-- STATS:START -->
-**open source →**
-
-| Repository | ⭐ | Merged PRs | Reviews | Issues |
-|---|---|---|---|---|
-| [c2siorg/dataloom](https://github.com/c2siorg/dataloom) | 23 | 4 | 0 | 7 |
-
-**Totals:** 4 merged PRs · 7 issues &nbsp;·&nbsp; *updated 2026-05-02*
 <!-- STATS:END -->
 
 ---
