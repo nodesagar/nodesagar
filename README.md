@@ -77,7 +77,7 @@ I tinker with things until I understand them, then build something new with what
 **contributions →**
 
 <p align="center">
-  <img src="https://ghchart.rshah.org/2ea043/nodesagar" width="100%" alt="Contribution Chart">
+  <img src="https://raw.githubusercontent.com/nodesagar/nodesagar/output/contribution-chart.svg" width="100%" alt="Contribution Chart">
 </p>
 
 &nbsp;
