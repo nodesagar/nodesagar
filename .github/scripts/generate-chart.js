@@ -43,7 +43,6 @@ async function fetchContributions() {
 }
 
 function buildFullYearWeeks(apiWeeks) {
-  // Build a map of date -> count from API data
   const countMap = {};
   for (const week of apiWeeks) {
     for (const day of week.contributionDays) {
@@ -51,11 +50,9 @@ function buildFullYearWeeks(apiWeeks) {
     }
   }
 
-  // Generate all days from Jan 1 to Dec 31 2026
   const start = new Date("2026-01-01");
   const end = new Date("2026-12-31");
 
-  // Find the Sunday on or before Jan 1
   const gridStart = new Date(start);
   gridStart.setDate(gridStart.getDate() - gridStart.getDay());
 
@@ -89,11 +86,11 @@ function getColor(count) {
 }
 
 function buildSVG(weeks) {
-  const CELL = 11;
+  const CELL = 10;
   const GAP = 2;
   const STEP = CELL + GAP;
-  const TOP_PAD = 28;
-  const LEFT_PAD = 30;
+  const TOP_PAD = 24;
+  const LEFT_PAD = 28;
 
   const numWeeks = weeks.length;
   const width = LEFT_PAD + numWeeks * STEP + 10;
@@ -134,7 +131,7 @@ function buildSVG(weeks) {
     });
   });
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" style="width:100%;height:auto">
   <rect width="${width}" height="${height}" fill="#0d1117" rx="6"/>
   ${monthLabels}
   ${dayLabels}
