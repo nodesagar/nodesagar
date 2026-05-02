@@ -26,11 +26,12 @@ jobs:
 
       - name: Push SVG to output branch
         run: |
+          cp contribution-chart.svg /tmp/contribution-chart.svg
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin output
           git checkout output
-          cp $GITHUB_WORKSPACE/contribution-chart.svg ./contribution-chart.svg
+          cp /tmp/contribution-chart.svg contribution-chart.svg
           git add contribution-chart.svg
           git diff --cached --quiet || git commit -m "chore: update contribution chart"
           git push origin output
