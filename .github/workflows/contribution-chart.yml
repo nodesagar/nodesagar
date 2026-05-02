@@ -1,0 +1,32 @@
+name: Generate Contribution Chart
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: output
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate chart SVG
+        run: node generate-chart.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: nodesagar
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add contribution-chart.svg
+          git diff --cached --quiet || git commit -m "chore: update contribution chart"
+          git push
