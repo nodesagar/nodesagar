@@ -54,19 +54,19 @@ function buildFullYearWeeks(apiWeeks) {
   const end = new Date(2026, 11, 31);
 
   const gridStart = new Date(start);
-  gridStart.setDate(gridStart.getDate() - gridStart.getDay());
+  gridStart.setDate(gridStart.getDate() - gridStart.getDay()); // back to Sunday
 
   const weeks = [];
   let current = new Date(gridStart);
 
-  while (current <= end) {
+  while (current <= end || current.getDay() !== 0) {
     const week = [];
     for (let d = 0; d < 7; d++) {
       const y = current.getFullYear();
       const mo = String(current.getMonth() + 1).padStart(2, "0");
       const da = String(current.getDate()).padStart(2, "0");
       const dateStr = `${y}-${mo}-${da}`;
-      const isIn2026 = current >= start && current <= end;
+      const isIn2026 = current.getFullYear() === 2026 && current >= start && current <= end;
       week.push({
         date: dateStr,
         contributionCount: isIn2026 ? (countMap[dateStr] || 0) : null,
@@ -114,7 +114,7 @@ function buildSVG(weeks) {
     }
   });
 
-  // Sun=0 top, Mon=1, Wed=3, Fri=5, Sat=6 bottom
+  // Sun=row 0 (top), Mon=1, Wed=3, Fri=5, Sat=6 (bottom)
   const dayLabels = ["Mon", "Wed", "Fri"].map((label, i) => {
     const row = i === 0 ? 1 : i === 1 ? 3 : 5;
     const y = TOP_PAD + row * STEP + CELL - 2;
@@ -126,8 +126,8 @@ function buildSVG(weeks) {
     week.contributionDays.forEach((day) => {
       if (day.contributionCount === null) return;
       const [y, mo, da] = day.date.split("-").map(Number);
-      const dow = new Date(y, mo - 1, da).getDay(); // 0=Sun, 1=Mon ... 6=Sat
-      const row = dow; // Sun at top, matches GitHub layout
+      const dow = new Date(y, mo - 1, da).getDay(); // 0=Sun ... 6=Sat
+      const row = dow;
       const x = LEFT_PAD + wi * STEP;
       const cy = TOP_PAD + row * STEP;
       const color = getColor(day.contributionCount);
