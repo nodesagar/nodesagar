@@ -41,13 +41,17 @@ I tinker with things until I understand them, then build something new with what
 **stats →**
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=nodesagar&theme=github_dark" width="32%" alt="Languages">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nodesagar&theme=github_dark" width="65%" alt="Profile Details">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nodesagar&theme=monokai" width="90%">
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=nodesagar&theme=github_dark" width="49%" alt="Stats">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=nodesagar&theme=github_dark&utcOffset=5.5" width="49%" alt="Productive Time">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=nodesagar&theme=monokai" width="45%">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=nodesagar&theme=monokai" width="45%">
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=nodesagar&theme=monokai" width="45%">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=nodesagar&theme=monokai&utcOffset=5.5" width="45%">
 </p>
 
 &nbsp;
