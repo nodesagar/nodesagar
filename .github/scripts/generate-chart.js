@@ -15,6 +15,7 @@ async function fetchContributions() {
               contributionDays {
                 date
                 contributionCount
+                weekday
               }
             }
           }
@@ -33,50 +34,46 @@ async function fetchContributions() {
   });
 
   const data = await res.json();
-
   if (data.errors) {
     console.error("GraphQL errors:", JSON.stringify(data.errors, null, 2));
     process.exit(1);
   }
-
   return data.data.user.contributionsCollection.contributionCalendar.weeks;
 }
 
-function buildFullYearWeeks(apiWeeks) {
-  const countMap = {};
-  for (const week of apiWeeks) {
-    for (const day of week.contributionDays) {
-      countMap[day.date] = day.contributionCount;
-    }
-  }
+function extendToFullYear(apiWeeks) {
+  // Get the last date the API returned
+  const lastWeek = apiWeeks[apiWeeks.length - 1];
+  const lastDay = lastWeek.contributionDays[lastWeek.contributionDays.length - 1];
+  let lastDate = new Date(lastDay.date + "T12:00:00");
 
-  const start = new Date(2026, 0, 1);
-  const end = new Date(2026, 11, 31);
+  const yearEnd = new Date("2026-12-31T12:00:00");
 
-  const gridStart = new Date(start);
-  gridStart.setDate(gridStart.getDate() - gridStart.getDay()); // back to Sunday
+  if (lastDate >= yearEnd) return apiWeeks;
 
-  const weeks = [];
-  let current = new Date(gridStart);
+  const extraWeeks = [];
+  let current = new Date(lastDate);
+  current.setDate(current.getDate() + 1);
 
-  while (current <= end || current.getDay() !== 0) {
+  while (current <= yearEnd) {
     const week = [];
     for (let d = 0; d < 7; d++) {
       const y = current.getFullYear();
       const mo = String(current.getMonth() + 1).padStart(2, "0");
       const da = String(current.getDate()).padStart(2, "0");
       const dateStr = `${y}-${mo}-${da}`;
-      const isIn2026 = current.getFullYear() === 2026 && current >= start && current <= end;
+      const inYear = current <= yearEnd;
       week.push({
         date: dateStr,
-        contributionCount: isIn2026 ? (countMap[dateStr] || 0) : null,
+        contributionCount: inYear ? 0 : null,
+        weekday: d,
       });
       current.setDate(current.getDate() + 1);
     }
-    weeks.push({ contributionDays: week });
+    extraWeeks.push({ contributionDays: week });
   }
 
-  return weeks;
+  return [...apiWeeks, ...extraWeeks];
 }
 
 function getColor(count) {
@@ -105,8 +102,7 @@ function buildSVG(weeks) {
   weeks.forEach((week, wi) => {
     const days = week.contributionDays.filter(d => d.contributionCount !== null);
     if (!days.length) return;
-    const [, mo] = days[0].date.split("-").map(Number);
-    const m = mo - 1;
+    const m = parseInt(days[0].date.split("-")[1], 10) - 1;
     if (m !== lastMonth) {
       const x = LEFT_PAD + wi * STEP;
       monthLabels += `<text x="${x}" y="14" fill="#57606a" font-size="10" font-family="'Segoe UI',sans-serif">${months[m]}</text>`;
@@ -114,7 +110,6 @@ function buildSVG(weeks) {
     }
   });
 
-  // Sun=row 0 (top), Mon=1, Wed=3, Fri=5, Sat=6 (bottom)
   const dayLabels = ["Mon", "Wed", "Fri"].map((label, i) => {
     const row = i === 0 ? 1 : i === 1 ? 3 : 5;
     const y = TOP_PAD + row * STEP + CELL - 2;
@@ -123,11 +118,10 @@ function buildSVG(weeks) {
 
   let cells = "";
   weeks.forEach((week, wi) => {
-    week.contributionDays.forEach((day) => {
+    week.contributionDays.forEach((day, dayIndex) => {
       if (day.contributionCount === null) return;
-      const [y, mo, da] = day.date.split("-").map(Number);
-      const dow = new Date(y, mo - 1, da).getDay(); // 0=Sun ... 6=Sat
-      const row = dow;
+      // dayIndex from API: 0=Sun, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri, 6=Sat
+      const row = day.weekday !== undefined ? day.weekday : dayIndex;
       const x = LEFT_PAD + wi * STEP;
       const cy = TOP_PAD + row * STEP;
       const color = getColor(day.contributionCount);
@@ -145,7 +139,7 @@ function buildSVG(weeks) {
 
 (async () => {
   const apiWeeks = await fetchContributions();
-  const weeks = buildFullYearWeeks(apiWeeks);
+  const weeks = extendToFullYear(apiWeeks);
   const svg = buildSVG(weeks);
   fs.writeFileSync("contribution-chart.svg", svg);
   console.log(`Done. ${weeks.length} weeks written.`);
