@@ -30,7 +30,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin output
-          git checkout output
+          git checkout -f output
           cp /tmp/contribution-chart.svg contribution-chart.svg
           git add contribution-chart.svg
           git diff --cached --quiet || git commit -m "chore: update contribution chart"
