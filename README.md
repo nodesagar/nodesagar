@@ -39,9 +39,8 @@ I tinker with things until I understand them, then build something new with what
 &nbsp;
 
 **stats →**
-
 <p align="center">
-  <img src="./assets/stats/profile-details.svg" width="90%">
+  <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&theme=nord&show_icons=true&hide_border=true&count_private=true" width="90%">
 </p>
 <p align="center">
   <img src="./assets/stats/repos-per-language.svg" width="45%">
