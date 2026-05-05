@@ -48,7 +48,6 @@ I tinker with things until I understand them, then build something new with what
 </p>
 <p align="center">
   <img src="./assets/stats/stats.svg" width="45%">
-  <img src="./assets/stats/productive-time.svg" width="45%">
 </p>
 
 &nbsp;
