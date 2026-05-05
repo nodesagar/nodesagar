@@ -40,7 +40,7 @@ I tinker with things until I understand them, then build something new with what
 
 **stats →**
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=nodesagar&theme=nord&show_icons=true&hide_border=true&count_private=true" width="90%">
+  <img src="./assets/stats/github-stats.svg" width="90%">
 </p>
 <p align="center">
   <img src="./assets/stats/repos-per-language.svg" width="45%">
@@ -49,7 +49,6 @@ I tinker with things until I understand them, then build something new with what
 <p align="center">
   <img src="./assets/stats/stats.svg" width="45%">
 </p>
-
 &nbsp;
 
 <p align="center">
