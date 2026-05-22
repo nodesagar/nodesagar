@@ -81,9 +81,9 @@ I tinker with things until I understand them, then build something new with what
 
 | Repository | ⭐ | Merged PRs | Reviews | Issues |
 |---|---|---|---|---|
-| [c2siorg/dataloom](https://github.com/c2siorg/dataloom) | 23 | 4 | 0 | 7 |
+| [c2siorg/dataloom](https://github.com/c2siorg/dataloom) | 23 | 6 | 0 | 7 |
 
-**Totals:** 4 merged PRs · 7 issues &nbsp;·&nbsp; *updated 2026-05-22*
+**Totals:** 6 merged PRs · 7 issues &nbsp;·&nbsp; *updated 2026-05-22*
 <!-- STATS:END -->
 
 ---
