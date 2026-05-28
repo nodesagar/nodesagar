@@ -82,8 +82,9 @@ I tinker with things until I understand them, then build something new with what
 | Repository | ⭐ | Merged PRs | Reviews | Issues |
 |---|---|---|---|---|
 | [c2siorg/dataloom](https://github.com/c2siorg/dataloom) | 23 | 8 | 0 | 7 |
+| [Ashwini0095/ownURgrowth_supabase](https://github.com/Ashwini0095/ownURgrowth_supabase) | 0 | 1 | 0 | 0 |
 
-**Totals:** 8 merged PRs · 7 issues &nbsp;·&nbsp; *updated 2026-05-27*
+**Totals:** 9 merged PRs · 7 issues &nbsp;·&nbsp; *updated 2026-05-28*
 <!-- STATS:END -->
 
 ---
