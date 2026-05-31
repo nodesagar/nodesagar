@@ -36,6 +36,22 @@ I tinker with things until I understand them, then build something new with what
 
 <br>
 
+**~ →**
+
+```zsh
+sagar@macbook ~ % whoami
+↳ software engineering student · mac user · community person
+
+sagar@macbook ~ % cat now.txt
+↳ shipping small, focused saas that solves one annoying problem well
+↳ learning to test properly — e2e, playwright, less fragile frontends
+
+sagar@macbook ~ % uptime
+↳ usually building · sometimes overthinking · always shipping something
+```
+
+<br>
+
 ---
 
 <br>
