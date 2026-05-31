@@ -4,6 +4,11 @@ const fs = require("fs");
 
 const USERNAME = process.env.GH_USERNAME || "nodesagar";
 
+// Repositories to exclude from the open source contributions table.
+const EXCLUDED_REPOS = new Set([
+  "Ashwini0095/ownURgrowth_supabase",
+]);
+
 const gql = graphql.defaults({
   headers: { authorization: `token ${process.env.GH_TOKEN}` },
 });
@@ -33,12 +38,14 @@ function buildTable(prs, issues) {
 
   for (const { repository: r } of prs.nodes) {
     if (r.nameWithOwner.startsWith(`${USERNAME}/`)) continue;
+    if (EXCLUDED_REPOS.has(r.nameWithOwner)) continue;
     repos[r.nameWithOwner] ??= { stars: r.stargazerCount, mergedPRs: 0, reviews: 0, issues: 0, url: r.url };
     repos[r.nameWithOwner].mergedPRs++;
   }
 
   for (const { repository: r } of issues.nodes) {
     if (r.nameWithOwner.startsWith(`${USERNAME}/`)) continue;
+    if (EXCLUDED_REPOS.has(r.nameWithOwner)) continue;
     repos[r.nameWithOwner] ??= { stars: r.stargazerCount, mergedPRs: 0, reviews: 0, issues: 0, url: r.url };
     repos[r.nameWithOwner].issues++;
   }
